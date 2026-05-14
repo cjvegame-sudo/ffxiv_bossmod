@@ -161,11 +161,15 @@ public enum SID : uint
     None = 0,
     BasicInstinct = 2498, // applied by Basic Instinct to self
     SurpanakhasFury = 2130, // applied by Surpanakha to self
+    WingedReprobation = 3640, //Applied by Surpanakha, repeat executable
+    WingedRedemption = 3641, //Appied at the end of Winged Redemption
     HPBoost = 2120, // applied by Devour to self
     BreathOfMagic = 3712, // applied by Breath of Magic to target
     Bleeding = 1714, // applied by Nightbloom to target
     PhantomFlurry = 2502, // applied by Phantom Flurry to self
     Boost = 1716, // applied by Bristle to self
+    Harmonize = 2118,// applied by Whistle
+    Tingling = 2492,// applied by Tingle
     DeepFreeze = 1731, // applied by the Ram's Voice to target
     Windburn = 1723, // applied by Feather Rain to target
     LucidDreaming = 1204, // applied by Lucid Dreaming to self
@@ -175,6 +179,8 @@ public enum SID : uint
     AethericMimicryTank = 2124,
     AethericMimicryDPS = 2125,
     AethericMimicryHealer = 2126,
+    WaxingNocturne = 1718, //Applied by Moonflute
+    WaningNocturne = 1727, //Applied by Moonflute
 }
 
 public sealed class Definitions : IDisposable
