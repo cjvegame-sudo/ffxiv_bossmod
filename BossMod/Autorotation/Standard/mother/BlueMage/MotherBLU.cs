@@ -1,15 +1,17 @@
 ﻿using BossMod.BLU;
 using BossMod.Data;
+using BossMod.Autorotation.xan;
 using FFXIVClientStructs.FFXIV.Client.Game.Gauge;
 using static BossMod.AIHints;
 
-namespace BossMod.Autorotation.xan;
+namespace BossMod.Autorotation.mother;
 
-public sealed class MotherBlue(RotationModuleManager manager, Actor player) : Castxan<AID, TraitID>(manager, player, PotionType.Intelligence)
+// Custom BLU module built on top of xan's autorotation base helpers.
+public sealed class MotherBlue(RotationModuleManager manager, Actor player) : BossMod.Autorotation.xan.Castxan<AID, TraitID>(manager, player, PotionType.Intelligence)
 {
     public static RotationModuleDefinition Definition()
     {
-        var def = new RotationModuleDefinition("Mother BLU1", "Mother's Blue Mage", "Standard rotation (Mother)", "Mother Blue", RotationModuleQuality.WIP, BitMask.Build(Class.BLU), 80);
+        var def = new RotationModuleDefinition("Mother BLU1", "Mother's Blue Mage", "Standard rotation (Mother)|Blue Mage", "Mother Blue (based on xan)", RotationModuleQuality.WIP, BitMask.Build(Class.BLU), 80);
 
         def.DefineShared().AddAssociatedActions(AID.Nightbloom, AID.BeingMortal, AID.BothEnds, AID.Apokalypsis, AID.MatraMagic);
 
